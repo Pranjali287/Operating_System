@@ -5,11 +5,12 @@ int n;
 printf("\n enter the number of process \n");
 scanf("%d",&n);
 int bt[n],tat[n],wt[n],p[n],pr[n];
-printf("\n enter the burst time of the process");
+printf("\n enter the priority of %d processes",n);
 for(int i=1;i<=n;i++)
 {
 	scanf("%d \n",&pr[i]);
 }
+printf("\n enter the burst time of %d processes",n);
 for(int i=1;i<=n;i++)
 {
 	scanf("\n %d",&bt[i]);
@@ -25,6 +26,11 @@ for(int i=1;i<=n;i++)
 		temp=pr[i];
 		pr[i]=pr[j];
 		pr[j]=temp;
+
+		temp=bt[i];
+		bt[i]=bt[j];
+		bt[i]=temp;
+
 		temp=p[i];
 		p[i]=p[j];
 		p[j]=temp;
